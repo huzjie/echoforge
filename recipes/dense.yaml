@@ -1,0 +1,13 @@
+# dense — 长上下文 / 大专家规模
+attention:
+  seq_len: 128
+  window: 16
+  max_global: 32
+moe:
+  n_experts: 128
+  top_k: 16
+  max_routers: 8
+echo:
+  k_steps: 4
+  max_rank: 4
+n_sequences: 8

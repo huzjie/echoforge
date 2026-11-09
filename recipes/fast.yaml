@@ -1,0 +1,13 @@
+# fast — 大 ECHO 步长，更大解码加速
+attention:
+  seq_len: 64
+  window: 8
+  max_global: 16
+moe:
+  n_experts: 64
+  top_k: 8
+  max_routers: 8
+echo:
+  k_steps: 8
+  max_rank: 8
+n_sequences: 8

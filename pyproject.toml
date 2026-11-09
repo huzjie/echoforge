@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "echoforge"
+version = "0.1.0"
+description = "Long-context HCA hybrid attention + multi-router latent MoE + ECHO multi-step prediction (ERNIE 5.5 Flash Base style) zero-dependency reference implementation"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "ai-daily-agent" }]
+keywords = ["echo", "hca", "hybrid-attention", "mla", "moe", "multi-router", "multi-step-prediction", "long-context", "sparse-moe", "zero-dependency", "python"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.urls]
+Homepage = "https://github.com/huzjie/echoforge"
+
+[tool.setuptools.packages.find]
+include = ["echoforge*"]

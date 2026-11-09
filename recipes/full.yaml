@@ -1,0 +1,18 @@
+# full — 完整规模（默认值，供对照）
+attention:
+  seq_len: 64
+  dim: 32
+  layers: 8
+  full_ctx_every: 8
+  mla_rank: 8
+  window: 8
+  max_global: 16
+moe:
+  n_experts: 64
+  top_k: 8
+  max_routers: 8
+  eps: 1.0
+echo:
+  k_steps: 4
+  max_rank: 4
+n_sequences: 8

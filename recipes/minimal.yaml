@@ -1,0 +1,13 @@
+# minimal — 最小规模快速参考（亚秒级）
+attention:
+  seq_len: 32
+  window: 4
+  max_global: 16
+moe:
+  n_experts: 16
+  top_k: 4
+  max_routers: 4
+echo:
+  k_steps: 2
+  max_rank: 2
+n_sequences: 4

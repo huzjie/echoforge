@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: echoforge
+  labels:
+    app: echoforge
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: echoforge
+  template:
+    metadata:
+      labels:
+        app: echoforge
+    spec:
+      containers:
+        - name: echoforge
+          image: echoforge:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8431
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8431
+            initialDelaySeconds: 3
+            periodSeconds: 5
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: echoforge
+spec:
+  selector:
+    app: echoforge
+  ports:
+    - port: 8431
+      targetPort: 8431
+  type: ClusterIP

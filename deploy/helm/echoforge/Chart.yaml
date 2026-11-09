@@ -1,0 +1,6 @@
+apiVersion: v2
+name: echoforge
+description: A Helm chart for echoforge, a zero-dependency long-context HCA attention + multi-router MoE + ECHO multi-step prediction reference implementation (ERNIE 5.5 Flash Base style)
+type: application
+version: 0.1.0
+appVersion: "0.1.0"
